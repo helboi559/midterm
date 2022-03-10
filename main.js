@@ -15,22 +15,25 @@ Note: This problem should account for negative number input
 //output:sum odd nums between them(inclusive)
 function sumOfOdds(num1,num2){
 //convert num to positive if negative
-// let isPos = true
-if (num1 < 0 ) {
-    isPos = false
-    num1 = Math.abs(num1)
-}
-//collect nums in array
-// let arr = []
+
+// if (num1 < 0) {
+//     num1 = 
+//     num2 = num1
+// }
+// //collect nums in array
+let arr = []
 // collect sum total
 let sumOdds = 0 ;
 //  let sumOfEvens = 0
-for(num1 ; num1 <= num2 ; num1++) {
+while (num2 >= num1) {
     if(num1 % 2 === 1) {
         sumOdds += num1
+
     }
+    num1 = num1 + 1
 }
-  return sumOdds  
+  return sumOdds
+
 }
 
 
@@ -43,7 +46,7 @@ console.log("///////////////////////////////////////////////////////////////////
 console.log(sumOfOdds(3,15)) //63
 console.log(sumOfOdds(-3,11)) //37
 console.log(sumOfOdds(0,20)) //100
-console.log(sumOfOdds(-10,-1)) //-21
+console.log(sumOfOdds(-10,-1)) //-25
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
 
 /*
